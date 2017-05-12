@@ -94,18 +94,63 @@
 			//var y = td_start - 1;
 			//var a = document.getElementById('table_morf').rows[x].cells.item(y).bgColor="red";
 			//var a = document.getElementById('table_morf').rows[x].cells.item(y).innerHTML="1";
-			var x_coord = -2;
-			var y_coord = -2;
-			for (c = 0; c < 1; c++) {
-				x_coord++;
-				y_coord++;
+			function getRandomInRange(min, max) {
+  				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+			
+			//var x_coord = 0;
+			//var y_coord = 0;
+			
+	/*		var randomDirection = getRandomInRange(1;8);			//генерится направление куда будет расти рисунок
+			swith (randomDirection) {								//всего 8 направлений
+				case 1:												//левый верхний угол
+					x_coord = -1;
+					y_coord = -1;
+					break;
+				case 2:												//вверх
+					x_coord = -1;
+					y_coord = 0;
+					break;
+				case 3:												//правый верхний угол
+					x_coord = -1;
+					y_coord = +1;				
+					break;
+				case 4:												//вправо
+					x_coord = 0;
+					y_coord = +1;				
+					break;
+				case 5:												//правый нижний угол
+					x_coord = +1;
+					y_coord = +1;				
+					break;
+				case 6:												//вниз
+					x_coord = +1;
+					y_coord = 0;				
+					break;
+				case 7:												//левый нижниый угол
+					x_coord = +1;
+					y_coord = -1;				
+					break;
+				case 8:												//влево
+					x_coord = 0;
+					y_coord = +1;				
+					break;
+			}
+			
+		*/
+			
+			
+			for (c = 0; c < 3; c++) {
+				var random = getRandomInRange(-3, 3);
+				x_coord = +1;
+				y_coord = -1;
 				x_coord_reverse = 4 - x_coord;
 				y_coord_reverse = 3 + y_coord;
 				document.getElementById('table_morf').rows[3+x_coord].cells.item(4+y_coord).bgColor="red";
 				document.getElementById('table_morf').rows[y_coord_reverse].cells.item(x_coord_reverse).bgColor="red";
-				alert (x_coord_reverse);
-				alert (y_coord_reverse);
 			}
+			
 			
 			
 		/*	var x_coord = 0;
