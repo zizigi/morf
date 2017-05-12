@@ -1,0 +1,24 @@
+<html>
+<body>
+<script type="text/javascript">
+function getPos(obj)
+{
+var x=0, y=0;
+while(obj) {
+    x+=obj.offsetLeft;
+    y+=obj.offsetTop;
+    obj=obj.offsetParent;
+ }
+ return {x:x,y:y}
+}
+document.write('<table><tr><td>');
+document.write('<br><br><div id="mydiv" >my div</div>');
+document.write('</td></tr></table>');
+var elem = document.getElementById("mydiv");
+var pos = getPos(elem);
+var x = pos.x;
+var y = pos.y;
+document.write( elem.id+" = "+x+"px, "+y+"px<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+		<style>
+			td.td_class {width:55px; height:71px; align:center; valign:top;}
+			
+		</style>
+	</head>
+	<body>
+		<table id="table_morf"  border="1">
+			<tr>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+			</tr>
+			<tr>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+			</tr>
+			<tr>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td ></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+			</tr>
+			<tr id="row_morf_start">
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td id="td_morf_start" bgcolor="yellow"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+			</tr>
+			<tr>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+			</tr>
+			<tr>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+			</tr>
+			<tr>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+				<td class="td_class"></td>
+			</tr>
+		</table>
+			
+		<script>
+			//var row_start = document.getElementById('row_morf_start').rowIndex;
+			//var td_start = document.getElementById('td_morf_start').cellIndex;
+			//var x = row_start - 1;
+			//var y = td_start - 1;
+			//var a = document.getElementById('table_morf').rows[x].cells.item(y).bgColor="red";
+			//var a = document.getElementById('table_morf').rows[x].cells.item(y).innerHTML="1";
+			var x_coord = -2;
+			var y_coord = -2;
+			for (c = 0; c < 1; c++) {
+				x_coord++;
+				y_coord++;
+				x_coord_reverse = 4 - x_coord;
+				y_coord_reverse = 3 + y_coord;
+				document.getElementById('table_morf').rows[3+x_coord].cells.item(4+y_coord).bgColor="red";
+				document.getElementById('table_morf').rows[y_coord_reverse].cells.item(x_coord_reverse).bgColor="red";
+				alert (x_coord_reverse);
+				alert (y_coord_reverse);
+			}
+			
+			
+		/*	var x_coord = 0;
+			var y_coord = 0;
+			
+			for (c = 0; c < 3; c++) {
+			var random = Math.floor(Math.random() * 2);
+			switch (random) {
+				case 0:
+					x_coord = x_coord + 3;
+					y_coord = y_coord + 1;
+					document.getElementById('table_morf').rows[3+y_coord].cells.item(4+x_coord).bgColor="red";
+					break;
+				case 1:
+					x_coord = x_coord - 3;
+					y_coord = y_coord - 1;
+					document.getElementById('table_morf').rows[3+y_coord].cells.item(4+x_coord).bgColor="red";
+					break;
+				case 2:
+					x_coord = x_coord - 2;
+					y_coord = y_coord + 2;
+					document.getElementById('table_morf').rows[3+y_coord].cells.item(4+x_coord).bgColor="red";
+					break;
+			}
+			
+		 }
+			*/
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			var tr_column = 0;
+			for (i = 0; i < 64; i++) {
+				var td_line = 0;
+				while (td_line <= 6) {
+					document.getElementById('table_morf').rows[td_line].cells.item(0+tr_column).innerHTML= td_line + ' ; ' + tr_column;
+					td_line++;
+				}
+					if (td_line = 6) {
+						tr_column = tr_column + 1;
+						}
+			}
+			//alert (a);
+			//var a = $('#table_morf').prop('cells',).item('0').attr('bgColor', 'red');
+			//var b = $('#morf_start').prop('parentNode');
+			//alert (b);
+		</script>
+
+	</body>
+</hml>
